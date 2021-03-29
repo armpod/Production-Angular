@@ -1,3 +1,6 @@
-<div>
-  <p>Hello World</p>
-</div>
+<section class="grid grid-cols-4 gap-4">
+  <div class="shadow p-2" *ngFor="let movie of allMovies$ | async">
+    <header class="text-center font-medium">{{movie.name}}</header>
+    <img [src]="movie.imageUrl" class="mt-2 movie_image justify-self-auto m-auto"/>
+  </div>
+</section>
